@@ -42,9 +42,9 @@ Entre otros...
 * Relación entre los tipos de servicios contratados y el abandono.
   
 🛠️ Herramientas Utilizadas
-Python 🐍
-Pandas 📚
-NumPy 🔢
-Matplotlib & Seaborn 📊
-Scikit-learn 🤖
-Google Colab ☁️
+* Python 🐍
+* Pandas 📚
+* NumPy 🔢
+* Matplotlib & Seaborn 📊
+* Scikit-learn 🤖
+* Google Colab ☁️
