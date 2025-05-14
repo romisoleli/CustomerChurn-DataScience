@@ -16,7 +16,7 @@ Y si el cliente ha abandonado o no la empresa (variable objetivo: Churn)
 Entre otros...
 
 # 🔍 Etapas del Proyecto (2da Pre - Entrega)
-# Exploración y Transformación
+## Exploración y Transformación
 * Mostrar primeros 5 registros
 * Mostrar últimos 5 registros
 * Mostrar tipos de datos por columna
@@ -25,7 +25,7 @@ Entre otros...
 * Transformación de columna TotalCharges en númerica
 * Mostrar resumen estadistico de las columnas
 * Sumar cantidad de nulos por columna
-# Análisis
+## Análisis
 * Cálculo del promedio de meses de permanencia
 * Cálculo del porcentaje de abandono general
 * Cálculo del estimado que gasto el cliente durante su tiempo de permanencia.
@@ -33,7 +33,7 @@ Entre otros...
 * Cálculo de porcentaje de permanencia en relación con el Método de Pago
 * Cálculo de porcentaje de permanencia en relación con el Tipo de Contrato
 * Cálculo de porcentaje de permanencia en relación con el Tipo de Servicio de Internet
-# Gráficos
+## Gráficos
 * Gasto mensual que poseen los clientes
 * Antiguedad de clientes
 * Relación entre tipo de contrato y abandono
@@ -41,7 +41,7 @@ Entre otros...
 * Relación entre gasto mensual y abandono
 * Relación entre los tipos de servicios contratados y el abandono.
   
-🛠️ Herramientas Utilizadas
+# 🛠️ Herramientas Utilizadas
 * Python 🐍
 * Pandas 📚
 * NumPy 🔢
