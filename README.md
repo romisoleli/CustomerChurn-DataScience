@@ -5,7 +5,6 @@ Gracias al crecimiento del análisis de datos y la inteligencia artificial, hoy 
 
 # 🎯 Objetivo del Proyecto
 Este proyecto tiene como objetivo predecir si un cliente abandonará el servicio basándose en su comportamiento y características contractuales, utilizando técnicas de ciencia de datos y aprendizaje automático.
-
 Para ello, se empleará el dataset público [Telco Customer Churn de Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn), que incluye información detallada sobre miles de clientes de una empresa de telecomunicaciones, como:
 Género
 Tiempo como cliente
@@ -77,7 +76,9 @@ Este modelo puede ser utilizado por la empresa para anticiparse a la baja de cli
 
 # 📊 4ta Preentrega – Análisis No Supervisado (Clustering)
 
-En esta etapa se aplicaron técnicas de aprendizaje no supervisado con el objetivo de identificar agrupamientos naturales de clientes basados en sus características y comportamientos. A diferencia de las etapas anteriores, en esta fase no se utilizó una variable objetivo como “Churn”, sino que se buscó descubrir patrones ocultos en los datos. Se consideró inicialmente la posibilidad de aplicar DBSCAN, ya que puede detectar grupos de diferentes formas y tamaños sin necesidad de predefinir el número de clusters, pero sus resultados no fueron satisfactorios debido a la sensibilidad a los parámetros y a que el dataset estaba muy estructurado. Por eso se optó por el algoritmo **K-Means**, que se adapta mejor a datos numéricos, escalados y con distribución uniforme, como los del dataset trabajado. Para determinar la cantidad óptima de clusters se utilizaron los métodos del Codo (Elbow) y el Score de Silhouette, y para facilitar la visualización de los grupos formados se aplicó **PCA** (Análisis de Componentes Principales), reduciendo la dimensionalidad a dos componentes principales.
+En esta etapa se aplicaron técnicas de aprendizaje no supervisado con el objetivo de identificar agrupamientos naturales de clientes basados en sus características y comportamientos. A diferencia de las etapas anteriores, en esta fase no se utilizó una variable objetivo como “Churn”, sino que se buscó descubrir patrones ocultos en los datos. Se consideró inicialmente la posibilidad de aplicar DBSCAN, ya que puede detectar grupos de diferentes formas y tamaños sin necesidad de predefinir el número de clusters, pero sus resultados no fueron satisfactorios debido a la sensibilidad a los parámetros y a que el dataset estaba muy estructurado. 
+Con el analìsis exploratorio previo, se validó que podíamos aplicar PCA, como las variables numéricas tenían buena dispersión, este tiene sentido y puede captar la varianza. Se pudo ver que los datos muestran comportamientos diferenciados y se optó por aplicar el algoritmo **K-Means**, que se adapta mejor a datos numéricos, escalados y con distribución uniforme, como los del dataset trabajado.
+Para determinar la cantidad óptima de clusters se utilizaron los métodos del Codo (Elbow) y el Score de Silhouette, y para facilitar la visualización de los grupos formados se aplicó **PCA** (Análisis de Componentes Principales), reduciendo la dimensionalidad a dos componentes principales.
 
 ## Pasos realizados
 * Preprocesamiento del dataset (eliminación de columnas irrelevantes, codificación de variables categóricas, escalado)
@@ -98,6 +99,18 @@ Este tipo de segmentación permite a las empresas:
 
 El análisis no supervisado complementa la predicción de abandono al aportar una mirada más estratégica sobre el conjunto total de clientes, incluso sin saber si se irán o no.
 
+# Implementación adicional – Redes Neuronales
+
+Como extensión del trabajo, y en línea con los temas vistos en clase, se desarrolló un modelo de red neuronal supervisada con el objetivo de predecir el abandono de clientes (Churn) a partir del mismo dataset utilizado en las etapas anteriores.
+
+Se construyó una red neuronal multicapa utilizando Keras, con dos capas ocultas (activación ReLU) y una capa de salida sigmoidea, entrenada con el optimizador Adam y función de pérdida binaria. El modelo fue evaluado sobre el conjunto de prueba y logró una precisión del 78%, con buen desempeño en la detección de clientes que no abandonan y desempeño moderado para quienes sí lo hacen (recall del 50%).
+Aunque la red neuronal no superó en rendimiento al modelo de Random Forest, permitió:
+
+* Validar los conceptos aprendidos en redes neuronales.
+* Implementar una arquitectura sencilla pero funcional sobre datos reales.
+* Confirmar que modelos no lineales también captan patrones útiles para el negocio.
+
+Esta implementación demuestra el potencial del aprendizaje profundo como herramienta complementaria en escenarios donde se busca predecir comportamientos complejos a partir de múltiples variables.
   
 # 🛠️ Herramientas Utilizadas
 * Python 🐍
