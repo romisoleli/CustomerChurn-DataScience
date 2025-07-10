@@ -15,7 +15,7 @@ Cargos mensuales y totales
 Y si el cliente ha abandonado o no la empresa (variable objetivo: Churn)
 Entre otros...
 
-# 🔍 Etapas del Proyecto (2da Pre - Entrega)
+# 🔍 2da Preentrega - Análisis y Exploración
 ## Exploración y Transformación
 * Mostrar primeros 5 registros
 * Mostrar últimos 5 registros
@@ -40,6 +40,40 @@ Entre otros...
 * Relación entre género y abandono
 * Relación entre gasto mensual y abandono
 * Relación entre los tipos de servicios contratados y el abandono.
+
+  # 🧠 3ra Preentrega – Clasificación Supervisada
+
+En esta etapa se desarrollaron modelos de **aprendizaje supervisado** con el objetivo de predecir si un cliente abandonará el servicio (variable objetivo: `Churn`). Para ello, se probaron distintos algoritmos de clasificación, se aplicaron técnicas de balanceo de clases y se evaluaron los modelos con diferentes métricas.
+
+El modelo que obtuvo mejores resultados fue **Random Forest**, optimizado con **GridSearchCV**, mostrando un buen desempeño general y equilibrio entre precisión y recall. Para mejorar la representación de las clases, se aplicó la técnica de sobremuestreo **SMOTE**, ya que el dataset original estaba desbalanceado.
+
+## Pasos realizados
+* Preprocesamiento completo del dataset
+  * Conversión de `TotalCharges` a numérico y manejo de valores nulos
+  * Codificación de variables categóricas
+  * Escalado de los datos
+* Separación en variables predictoras (`X`) y objetivo (`y`)
+* Balanceo de clases con **SMOTE**
+* División de datos en entrenamiento y testeo
+* Entrenamiento y evaluación de múltiples modelos de clasificación:
+  * Regresión Logística
+  * Árbol de Decisión
+  * Random Forest (con hiperparámetros ajustados por GridSearch)
+  * K-Nearest Neighbors
+* Evaluación con métricas como:
+  * Accuracy
+  * Precision
+  * Recall
+  * F1-score
+  * Curva ROC y AUC
+* Visualización de la importancia de variables con Random Forest
+* Comparación de resultados entre modelos
+
+## Conclusiones
+El modelo final logró una **buena capacidad para detectar clientes en riesgo de abandonar** el servicio. La combinación de Random Forest + GridSearch + SMOTE permitió mejorar notablemente los resultados. Además, se concluyó que variables como el tipo de contrato, el gasto mensual y la antigüedad del cliente fueron claves para determinar el churn.
+
+Este modelo puede ser utilizado por la empresa para anticiparse a la baja de clientes y aplicar estrategias de retención personalizadas.
+
 
 # 📊 4ta Preentrega – Análisis No Supervisado (Clustering)
 
