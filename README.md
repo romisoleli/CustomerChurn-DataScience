@@ -40,6 +40,32 @@ Entre otros...
 * Relación entre género y abandono
 * Relación entre gasto mensual y abandono
 * Relación entre los tipos de servicios contratados y el abandono.
+
+# 📊 4ta Preentrega – Análisis No Supervisado (Clustering)
+
+En esta etapa, se aplicaron técnicas de aprendizaje no supervisado con el objetivo de identificar **agrupamientos naturales de clientes** basados en sus características y comportamientos. A diferencia de las etapas anteriores, en esta fase no se utiliza una variable objetivo como “Churn”, sino que se intenta descubrir patrones ocultos en los datos.
+
+El algoritmo elegido fue **K-Means**, ya que se adapta bien a datos estructurados y escalados como los del dataset utilizado. Se tomaron decisiones informadas basadas en los métodos del Codo y Silhouette para definir el número óptimo de clusters. Además, se aplicó **PCA (Análisis de Componentes Principales)** para reducir la dimensionalidad y facilitar la visualización de los grupos formados.
+
+## Pasos realizados
+* Preprocesamiento del dataset (eliminación de columnas irrelevantes, codificación de variables categóricas, escalado)
+* Eliminación de la variable `Churn` para respetar la lógica de análisis no supervisado
+* Reducción de dimensionalidad con **PCA**
+* Determinación del número óptimo de clusters con:
+  * Método del Codo (Elbow Method)
+  * Score de Silhouette
+* Aplicación de **K-Means** con el valor óptimo de k
+* Visualización final de los clusters en un gráfico 2D
+* Conteo y análisis básico de la distribución de clientes por cluster
+
+## ¿Para qué sirve este análisis?
+Este tipo de segmentación permite a las empresas:
+* Identificar perfiles de clientes con comportamientos similares
+* Detectar grupos con mayor riesgo potencial de abandono (en futuras fases podrían cruzarse los clusters con la variable `Churn`)
+* Diseñar estrategias específicas de fidelización para cada segmento
+
+El análisis no supervisado complementa la predicción de abandono al aportar una mirada más estratégica sobre el conjunto total de clientes, incluso sin saber si se irán o no.
+
   
 # 🛠️ Herramientas Utilizadas
 * Python 🐍
