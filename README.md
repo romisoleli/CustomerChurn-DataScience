@@ -76,9 +76,7 @@ Este modelo puede ser utilizado por la empresa para anticiparse a la baja de cli
 
 # 📊 4ta Preentrega – Análisis No Supervisado (Clustering)
 
-En esta etapa se aplicaron técnicas de aprendizaje no supervisado con el objetivo de identificar agrupamientos naturales de clientes basados en sus características y comportamientos. A diferencia de las etapas anteriores, en esta fase no se utilizó una variable objetivo como “Churn”, sino que se buscó descubrir patrones ocultos en los datos. Se consideró inicialmente la posibilidad de aplicar DBSCAN, ya que puede detectar grupos de diferentes formas y tamaños sin necesidad de predefinir el número de clusters, pero sus resultados no fueron satisfactorios debido a la sensibilidad a los parámetros y a que el dataset estaba muy estructurado. 
-Con el analìsis exploratorio previo, se validó que podíamos aplicar PCA, como las variables numéricas tenían buena dispersión, este tiene sentido y puede captar la varianza. Se pudo ver que los datos muestran comportamientos diferenciados y se optó por aplicar el algoritmo **K-Means**, que se adapta mejor a datos numéricos, escalados y con distribución uniforme, como los del dataset trabajado.
-Para determinar la cantidad óptima de clusters se utilizaron los métodos del Codo (Elbow) y el Score de Silhouette, y para facilitar la visualización de los grupos formados se aplicó **PCA** (Análisis de Componentes Principales), reduciendo la dimensionalidad a dos componentes principales.
+En esta etapa se aplicaron técnicas de aprendizaje no supervisado con el objetivo de identificar agrupamientos naturales de clientes basados en sus características y comportamientos. A diferencia de las etapas anteriores, en esta fase no se utilizó una variable objetivo como “Churn”, sino que se buscó descubrir patrones ocultos en los datos. Se aplicaron dos algoritmos: **DBSCAN** y **K-Means**. DBSCAN permitió detectar agrupamientos sin necesidad de predefinir la cantidad de clusters y arrojó un buen desempeño (Silhouette Score: 0.718). Por otro lado, **K-Means** mostró una mejor segmentación general del dataset y una estructura de clusters más clara, lo que facilitó su análisis. Este algoritmo se adapta bien a datos numéricos, escalados y con distribución relativamente uniforme, como los del dataset trabajado. El análisis exploratorio previo permitió validar que las variables presentaban buena dispersión, lo que justificó el uso de **PCA** para reducir la dimensionalidad y facilitar la visualización. La cantidad óptima de clusters para K-Means se definió con los métodos del Codo (Elbow) y el Score de Silhouette.
 
 ## Pasos realizados
 * Preprocesamiento del dataset (eliminación de columnas irrelevantes, codificación de variables categóricas, escalado)
@@ -110,7 +108,7 @@ Aunque la red neuronal no superó en rendimiento al modelo de Random Forest, per
 * Implementar una arquitectura sencilla pero funcional sobre datos reales.
 * Confirmar que modelos no lineales también captan patrones útiles para el negocio.
 
-Esta implementación demuestra el potencial del aprendizaje profundo como herramienta complementaria en escenarios donde se busca predecir comportamientos complejos a partir de múltiples variables.
+Esta implementación demuestraa el potencial del aprendizaje profundo como herramienta complementaria en escenarios donde se busca predecir comportamientos complejos a partir de múltiples variables.
   
 # 🛠️ Herramientas Utilizadas
 * Python 🐍
