@@ -77,9 +77,7 @@ Este modelo puede ser utilizado por la empresa para anticiparse a la baja de cli
 
 # 📊 4ta Preentrega – Análisis No Supervisado (Clustering)
 
-En esta etapa, se aplicaron técnicas de aprendizaje no supervisado con el objetivo de identificar **agrupamientos naturales de clientes** basados en sus características y comportamientos. A diferencia de las etapas anteriores, en esta fase no se utiliza una variable objetivo como “Churn”, sino que se intenta descubrir patrones ocultos en los datos.
-
-El algoritmo elegido fue **K-Means**, ya que se adapta bien a datos estructurados y escalados como los del dataset utilizado. Se tomaron decisiones informadas basadas en los métodos del Codo y Silhouette para definir el número óptimo de clusters. Además, se aplicó **PCA (Análisis de Componentes Principales)** para reducir la dimensionalidad y facilitar la visualización de los grupos formados.
+En esta etapa se aplicaron técnicas de aprendizaje no supervisado con el objetivo de identificar agrupamientos naturales de clientes basados en sus características y comportamientos. A diferencia de las etapas anteriores, en esta fase no se utilizó una variable objetivo como “Churn”, sino que se buscó descubrir patrones ocultos en los datos. Se consideró inicialmente la posibilidad de aplicar DBSCAN, ya que puede detectar grupos de diferentes formas y tamaños sin necesidad de predefinir el número de clusters, pero sus resultados no fueron satisfactorios debido a la sensibilidad a los parámetros y a que el dataset estaba muy estructurado. Por eso se optó por el algoritmo **K-Means**, que se adapta mejor a datos numéricos, escalados y con distribución uniforme, como los del dataset trabajado. Para determinar la cantidad óptima de clusters se utilizaron los métodos del Codo (Elbow) y el Score de Silhouette, y para facilitar la visualización de los grupos formados se aplicó **PCA** (Análisis de Componentes Principales), reduciendo la dimensionalidad a dos componentes principales.
 
 ## Pasos realizados
 * Preprocesamiento del dataset (eliminación de columnas irrelevantes, codificación de variables categóricas, escalado)
